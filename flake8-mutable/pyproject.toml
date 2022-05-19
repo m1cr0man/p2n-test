@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "flake8-mutable-nix-test"
+version = "0.1.0"
+description = "Test case for poetry2nix"
+authors = ["Lucas Savva <lucas@m1cr0man.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+flake8-mutable = "^1.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
