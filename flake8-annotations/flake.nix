@@ -14,6 +14,11 @@
           # The application
           myapp = prev.poetry2nix.mkPoetryApplication {
             projectDir = ./.;
+            overrides = prev.poetry2nix.overrides.withDefaults (self: super: {
+              flake8-annotations = super.flake8-annotations.overridePythonAttrs (oldAttrs: {
+                nativeBuildInputs = (oldAttrs.nativeBuildInputs or [ ]) ++ [ super.poetry-core ];
+              });
+            });
           };
         })
       ];

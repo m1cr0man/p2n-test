@@ -1,0 +1,65 @@
+Sourcing python-remove-tests-dir-hook
+Sourcing python-catch-conflicts-hook.sh
+Sourcing python-remove-bin-bytecode-hook.sh
+Sourcing pip-build-hook
+Using pipBuildPhase
+Using pipShellHook
+Sourcing pip-install-hook
+Using pipInstallPhase
+Sourcing python-imports-check-hook.sh
+Using pythonImportsCheckPhase
+Sourcing python-namespaces-hook
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking sources
+unpacking source archive /nix/store/8kkkgji264kgm8vx10jncaj17l7yzaxr-source
+source root is source
+setting SOURCE_DATE_EPOCH to timestamp 315619200 of file source/pyproject.toml
+@nix { "action": "setPhase", "phase": "patchPhase" }
+patching sources
+Removing path dependencies
+Finished removing path dependencies
+Removing git dependencies
+Finished removing git dependencies
+@nix { "action": "setPhase", "phase": "configurePhase" }
+configuring
+no configure script, doing nothing
+@nix { "action": "setPhase", "phase": "buildPhase" }
+building
+Executing pipBuildPhase
+Creating a wheel...
+[33mWARNING: The directory '/homeless-shelter/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.[0m[33m
+[0mProcessing /build/source
+  Running command Preparing metadata (pyproject.toml)
+  Traceback (most recent call last):
+    File "/nix/store/xsf0zqc9c3xkmbd7zdi8k6p3yi5qqy12-python3.9-pip-22.0.4/lib/python3.9/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 363, in <module>
+      main()
+    File "/nix/store/xsf0zqc9c3xkmbd7zdi8k6p3yi5qqy12-python3.9-pip-22.0.4/lib/python3.9/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 345, in main
+      json_out['return_val'] = hook(**hook_input['kwargs'])
+    File "/nix/store/xsf0zqc9c3xkmbd7zdi8k6p3yi5qqy12-python3.9-pip-22.0.4/lib/python3.9/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 164, in prepare_metadata_for_build_wheel
+      return hook(metadata_directory, config_settings)
+    File "/nix/store/bp8a56hfkbxm3q2y3p5rwf3dk5bqqfla-python3.9-poetry-core-1.0.8/lib/python3.9/site-packages/poetry/core/masonry/api.py", line 44, in prepare_metadata_for_build_wheel
+      builder = WheelBuilder(poetry)
+    File "/nix/store/bp8a56hfkbxm3q2y3p5rwf3dk5bqqfla-python3.9-poetry-core-1.0.8/lib/python3.9/site-packages/poetry/core/masonry/builders/wheel.py", line 58, in __init__
+      super(WheelBuilder, self).__init__(poetry, executable=executable)
+    File "/nix/store/bp8a56hfkbxm3q2y3p5rwf3dk5bqqfla-python3.9-poetry-core-1.0.8/lib/python3.9/site-packages/poetry/core/masonry/builders/builder.py", line 85, in __init__
+      self._module = Module(
+    File "/nix/store/bp8a56hfkbxm3q2y3p5rwf3dk5bqqfla-python3.9-poetry-core-1.0.8/lib/python3.9/site-packages/poetry/core/masonry/utils/module.py", line 63, in __init__
+      raise ModuleOrPackageNotFound(
+  poetry.core.masonry.utils.module.ModuleOrPackageNotFound: No file/folder found for package flake8-annotations-nix-test
+  [1;31merror[0m: [1msubprocess-exited-with-error[0m
+  
+  [31m×[0m [32mPreparing metadata [0m[1;32m([0m[32mpyproject.toml[0m[1;32m)[0m did not run successfully.
+  [31m│[0m exit code: [1;36m1[0m
+  [31m╰─>[0m See above for output.
+  
+  [1;35mnote[0m: This error originates from a subprocess, and is likely not a problem with pip.
+  [1;35mfull command[0m: [34m/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12/bin/python3.9 /nix/store/xsf0zqc9c3xkmbd7zdi8k6p3yi5qqy12-python3.9-pip-22.0.4/lib/python3.9/site-packages/pip/_vendor/pep517/in_process/_in_process.py prepare_metadata_for_build_wheel /build/tmp5xwnzxyy[0m
+  [1;35mcwd[0m: /build/source
+  Preparing metadata (pyproject.toml) ... [?25l[?25herror
+[1;31merror[0m: [1mmetadata-generation-failed[0m
+
+[31m×[0m Encountered error while generating package metadata.
+[31m╰─>[0m See above for output.
+
+[1;35mnote[0m: This is an issue with the package mentioned above, not pip.
+[1;36mhint[0m: See above for details.
