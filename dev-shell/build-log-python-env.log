@@ -1,0 +1,1 @@
+error: collision between `/nix/store/bp8a56hfkbxm3q2y3p5rwf3dk5bqqfla-python3.9-poetry-core-1.0.8/lib/python3.9/site-packages/poetry/__pycache__/__init__.cpython-39.pyc' and `/nix/store/0qi264c6ssdc3mh8n30sqkg50n343icz-python3.9-poetry-1.1.13/lib/python3.9/site-packages/poetry/__pycache__/__init__.cpython-39.pyc'

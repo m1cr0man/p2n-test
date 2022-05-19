@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "dev-shell"
+version = "0.1.0"
+description = "Showing dev shell that doesn't have poetry"
+authors = ["Lucas Savva <lucas@m1cr0man.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+rich = "^12.4.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
