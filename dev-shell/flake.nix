@@ -33,7 +33,6 @@
 
         devShell = (pkgs.poetry2nix.mkPoetryEnv {
           projectDir = ./.;
-          extraPackages = ps: [ ps.poetry ];
-        }).env;
+        }).env.overrideAttrs(final: prev: { nativeBuildInputs = [pkgs.poetry]; });
       }));
 }
